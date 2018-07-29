@@ -2,7 +2,7 @@
 A realtime online course player, built with React and Socket.IO.
 
 # Function
-This app is used to place course recordings.
+This app is used to play course recordings.
 ![image](/public/drag.png)
 
 # Setup Locally
