@@ -1,5 +1,5 @@
 {
-  "name": "courseplayerreact",
+  "name": "course-player-react",
   "version": "1.0.0",
   "description": "Course Player built with React and Socket.IO",
   "main": "index.js",
@@ -10,11 +10,9 @@
     "lint:watch": "npm run lint -- --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [
-    "react"
-  ],
+  "keywords": ["react"],
   "author": "johnny",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "express": "^4.16.2",

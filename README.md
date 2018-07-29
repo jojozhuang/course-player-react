@@ -1,34 +1,21 @@
-# Text Compare Tool
-This app is developed with Angular 5 and [Monaco Editor](https://github.com/Microsoft/monaco-editor).
+# Online Course Play
+A realtime online course player, built with React and Socket.IO.
 
 # Function
-This app is used to compare text. All the differences are displayed in a [Monaco Diff Editor](https://microsoft.github.io/monaco-editor/index.html) with highlighting. It supports multiple languages, e.g. c, java, xml, typescript, etc.
-![image](/src/assets/textcompare.png)
-
-# Demo
-The [Live Demo](https://text-compare.netlify.com/) is hosted by Netlify.
+This app is used to place course recordings.
+![image](/public/drag.png)
 
 # Setup Locally
 ```bash
-git clone https://github.com/jojozhuang/text-compare-angular.git
-cd text-compare-angular
+git clone https://github.com/jojozhuang/course-player-react.git
+cd course-player-react
 npm install
 npm start
 ```
-Access http://localhost:4200/ in web browser and click 'Text Compare' menu, enjoy!
-
-# Setup in Docker
-```bash
-git clone https://github.com/jojozhuang/text-compare-angular.git
-cd text-compare-angular
-npm install
-docker build -t text-compare-angular .
-docker run --name text-compare-angular -p 8080:80 text-compare-angular
-```
-Access http://localhost:8080/ in web browser and click 'Text Compare' menu, enjoy!
+Access http://localhost:12100/ in web browser and click 'Play' button, enjoy!
 
 # Portfolio 
-Read portfolio [Text Compare(Angular)](http://jojozhuang.github.io/portfolio/text-compare-angular/) to learn the main functions of this text compare tool.
+Read portfolio [Course Player(React)](http://jojozhuang.github.io/portfolio/course-player-react/) to learn the main functions of this course player.
 
 # Tutorial
-Read tutorial [Building Online Text Compare Tool](http://jojozhuang.github.io/tutorial/angular/building-online-text-compare-tool/) to learn how this text compare tool is built.
+Read tutorial [Building Course Player with React and Socket.IO](http://jojozhuang.github.io/tutorial/react/building-course-player-with-react-and-socketio/) to learn how this course player is built.
