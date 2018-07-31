@@ -1,27 +1,28 @@
-import express from 'express';
-import webpack from 'webpack';
-import path from 'path';
-import config from '../webpack.config.dev';
-import open from 'open';
-import favicon from 'serve-favicon';
-import courseApi from '../src/api/CourseApi';
-import dateTimeApi from '../src/api/DateTimeApi';
+import express from "express";
+import webpack from "webpack";
+import path from "path";
+import config from "../webpack.config.prod";
+import open from "open";
+import favicon from "serve-favicon";
+import courseApi from "../src/api/CourseApi";
+import dateTimeApi from "../src/api/DateTimeApi";
 
-const port = 12100;
+const port = process.env.PORT || 12100;
 const app = express();
 const compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  publicPath: config.output.publicPath
-}));
+app.use(
+  require("webpack-dev-middleware")(compiler, {
+    publicPath: config.output.publicPath
+  })
+);
 
-app.use(require('webpack-hot-middleware')(compiler));
-app.use(favicon(path.join(__dirname,'../public','assets','favicon.ico')));
+//app.use(require("webpack-hot-middleware")(compiler));
+app.use(favicon(path.join(__dirname, "../public", "assets", "favicon.ico")));
 
-app.get('*', function(req, res) {
-  res.sendFile(path.join( __dirname, '../src/index.html'));
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "../src/index.html"));
 });
-
 
 const server = app.listen(port, function(err) {
   if (err) {
@@ -31,32 +32,36 @@ const server = app.listen(port, function(err) {
   }
 });
 
-const io = require('socket.io')(server);
+const io = require("socket.io")(server);
 
-io.on('connection', (socket) => {
+io.on("connection", socket => {
   //console.log('new connection established');
 
-  socket.on('updateTime', function(data) {
+  socket.on("updateTime", function(data) {
     let second = data.time;
     if (second > 0 && second < 12600) {
-      console.log('server.updateTime:'+ second);
+      console.log("server.updateTime:" + second);
       // Screenshot
       const ssdata = courseApi.getScreenshotData(second);
       // Whiteboard
       const wbdata = courseApi.getWhiteBoardData(second);
 
       // Notify client through emit with data
-      socket.emit('playCourse', {time: second, ssdata: ssdata, wbdata:wbdata});
+      socket.emit("playCourse", {
+        time: second,
+        ssdata: ssdata,
+        wbdata: wbdata
+      });
     }
   });
 });
 
-function tick () {
+function tick() {
   let dt = new Date();
-  dt = dateTimeApi.dateAdd(dt, 'month', -4);
-  dt = dateTimeApi.dateAdd(dt, 'day', -9);
-  dt = dateTimeApi.dateAdd(dt, 'hour', -6);
-  dt = dateTimeApi.dateAdd(dt, 'minute', 12);
+  dt = dateTimeApi.dateAdd(dt, "month", -4);
+  dt = dateTimeApi.dateAdd(dt, "day", -9);
+  dt = dateTimeApi.dateAdd(dt, "hour", -6);
+  dt = dateTimeApi.dateAdd(dt, "minute", 12);
   dt = dt.toLocaleString();
   io.sockets.emit("realtime", dt);
 }
