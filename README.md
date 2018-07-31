@@ -5,6 +5,9 @@ A realtime online course player, built with React and Socket.IO.
 This app is used to play course recordings.
 ![image](/public/drag.png)
 
+# Demo
+The [Live Demo](https://course-player-react.herokuapp.com/) is hosted on Heroku.
+
 # Setup Locally
 ```bash
 git clone https://github.com/jojozhuang/course-player-react.git
@@ -14,7 +17,7 @@ npm start
 ```
 Access http://localhost:12100/ in web browser and click 'Play' button, enjoy!
 
-# Portfolio 
+# Portfolio
 Read portfolio [Course Player(React)](http://jojozhuang.github.io/portfolio/course-player-react/) to learn the main functions of this course player.
 
 # Tutorial
