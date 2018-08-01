@@ -3,7 +3,7 @@ A realtime online course player, built with React and Socket.IO.
 
 # Function
 This app is used to play course recordings.
-![image](/public/drag.png)
+![image](/public/player.png)
 
 # Demo
 The [Live Demo](https://course-player-react.herokuapp.com/) is hosted on Heroku.
