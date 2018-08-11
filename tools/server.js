@@ -1,8 +1,7 @@
 import express from "express";
 import webpack from "webpack";
 import path from "path";
-import config from "../webpack.config.prod";
-import open from "open";
+import config from "../webpack.config.dev";
 import favicon from "serve-favicon";
 import courseApi from "../src/api/CourseApi";
 import dateTimeApi from "../src/api/DateTimeApi";
@@ -17,7 +16,7 @@ app.use(
   })
 );
 
-//app.use(require("webpack-hot-middleware")(compiler));
+app.use(require("webpack-hot-middleware")(compiler));
 app.use(favicon(path.join(__dirname, "../public", "assets", "favicon.ico")));
 
 app.get("*", function(req, res) {
@@ -28,7 +27,7 @@ const server = app.listen(port, function(err) {
   if (err) {
     //console.log(err);
   } else {
-    open(`http://localhost:${port}`);
+    console.log(`Listening on port ${port}!`);
   }
 });
 
