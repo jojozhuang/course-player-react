@@ -18,7 +18,9 @@ npm start
 Access http://localhost:12100/ in web browser and click 'Play' button, enjoy!
 
 # Deployment
-Follow the tutorial [Deploying React and Socket.IO App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-react-and-socketio-app-to-heroku/) to deploy this app to Heroku.
+Follow tutorial [Deploying React and Socket.IO App to Heroku](https://jojozhuang.github.io/tutorial/react/deploying-react-and-socketio-app-to-heroku/) to deploy this app to Heroku.
+
+Follow tutorial [Continuously Deploy React and Socket.IO App to Heroku with Travis-CI](https://jojozhuang.github.io/tutorial/react/continuously-deploy-react-and-socketio-app-to-heroku-with-travis-ci/) to continuously deploy this app to Heroku.
 
 # Portfolio
 Read portfolio [Course Player(React)](https://jojozhuang.github.io/portfolio/course-player-react/) to learn the main functions of this course player.
