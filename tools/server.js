@@ -57,10 +57,11 @@ io.on("connection", socket => {
 
 function tick() {
   let dt = new Date();
+  /*
   dt = dateTimeApi.dateAdd(dt, "month", -4);
   dt = dateTimeApi.dateAdd(dt, "day", -9);
   dt = dateTimeApi.dateAdd(dt, "hour", -6);
-  dt = dateTimeApi.dateAdd(dt, "minute", 12);
+  dt = dateTimeApi.dateAdd(dt, "minute", 12);*/
   dt = dt.toLocaleString();
   io.sockets.emit("realtime", dt);
 }
