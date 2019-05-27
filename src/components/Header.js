@@ -21,7 +21,7 @@ class Header extends React.Component {
     return (
       <div>
         <div className="container text-center">
-          <h1>Course Player(React)</h1>
+          <h1>Course Player(React2233)</h1>
           <p>
             Built with <a href="https://reactjs.org/">React</a> and{" "}
             <a href="https://socket.io/">Socket.IO</a>
