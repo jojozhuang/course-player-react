@@ -6,7 +6,7 @@ This app is used to play course recordings.
 ![image](/public/player.png)
 
 # Demo
-Live Demo on [Heroku](https://course-player-react.herokuapp.com/) and on [Azure](https://course-player.azurewebsites.net/).
+* `Live Demo on Heroku:` <a href="https://course-player-react.herokuapp.com/" target="\_blank">https://course-player-react.herokuapp.com/</a>
 
 # Setup Locally
 ```bash
