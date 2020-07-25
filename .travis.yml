@@ -15,5 +15,5 @@ deploy:
   skip_cleanup: true
   keep-history: true
   api-key:
-    secure: $HEROKU_API_KEY
+    secure: EddQPzFJiyq1KCBU9eYVh/NTZeHfY33TgGDVnCzSgpb27JawY5XpFHr8b4xFCK1IyCL5l3kdCaFhGgXqO+i6r5bTAPA1jytTaE5m4B2uGVbuym/aBcVd46aFo+oJP+6AlwXRvM4yZ48xFoV9axeL35Y3R5aFr/XBmMMh1QfWTzplmKh3jFVB8ONq/U/ICXfzPA5b4lDOXLH1uiargtXs9Nv9MiH8TLu7Ph+7+fJsdYMNDa1HiXsG5MV/tj14+IaGwme1bBTameDht8oRnPzVnk9aYUErdcHLSc2XBFvOPAQxVcRmWJAGrEfR2G5/CBndm5wvcIS6+9+xoYZqr8ZUj/E8dvfoPbycDpJUyvI2UTIUturxDwkXPBccrD3S+g2qTgJ+dsWYnd/azl0q34cV97A29ArilwXPVulDCT/87u8LTEXuYLqs5aUk9yEHwEqO0XYbZRNAJ5f8X6DV7HiVRGjLSkcxJGe+x1Xz438xQ3DW4oUdc04QyiUhSw+2wF3OA1MTa41jbbKB+UERF9G2P08zayGsGjNtNZDb6inZP9VZr2tfLNmFI+mWbZ/yc62oO3vgy35ZM6dNy/Ca8/UGpEGcUVhJImGrz/nppdXl9p0j+U+blmeQIBxRiYzrbuQ7x/2yyyZhjd1ifZSCaaDp08d5x0mteACQWo3sDTj02gs=
   app: course-player-react
