@@ -11,9 +11,9 @@
     "lint:watch": "npm run lint -- --watch",
     "test": "echo \"Error: no test specified\"",
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s",
+    "build-babel": "npx -p @babel/cli -p @babel/core babel -d ./build ./src -s",
     "build": "npm run clean && npm run build-babel",
-    "compile": "./node_modules/.bin/babel ./src -d ./compiled",
+    "compile": "npx -p @babel/cli -p @babel/core babel ./src -d ./compiled",
     "build2": "NODE_ENV=production webpack --env production --config ./webpack.config.prod.js"
   },
   "keywords": [
