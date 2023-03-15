@@ -50,7 +50,7 @@
     "eventsource-polyfill": "0.9.6",
     "html-webpack-plugin": "5.5.0",
     "serve-favicon": "2.5.0",
-    "webpack": "5.75.0",
+    "webpack": "5.76.0",
     "webpack-cli": "5.0.1",
     "webpack-dev-middleware": "5.3.3",
     "webpack-hot-middleware": "2.25.3"
